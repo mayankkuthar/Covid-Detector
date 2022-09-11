@@ -1,0 +1,40 @@
+{% from 'form_helper.html' import display_field %}
+
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login - Covid Detector</title>
+{% endblock title %}
+
+{% block nav_left %}
+<form class="d-flex">
+    <button formaction="/signup" class="btn btn-danger mx-2" type="submit">Sign Up</button>
+</form>
+{% endblock nav_left %}
+
+{% block body %}
+<div class="bg_login">
+    <div class="borderStyle imb mt-5 ps-5 pe-5 pb-5 pt-5">
+        <div class="content loginLogo" >
+            <h2 class="mt-0">CD</h2>
+            <h2 class="mt-0">CD</h2>
+        </div>
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <h2 class="form-label">Login</h2>
+                {{display_field(form.username,"Username",autofocus=true,autocomplete='off')}}
+                <div id="emailHelp" class="form-text" style ="color: white !important;">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                {{display_field(form.password,"Password")}}
+            </div>
+            {{form.submit_button(class_="btn btn-primary")}}
+        <!-- csrf_token is hidden tag that prevents CSRF attack-->
+        {{
+            form.csrf_token
+        }}
+        </form>
+    </div>
+</div>
+{% endblock body %}

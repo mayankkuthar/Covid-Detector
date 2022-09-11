@@ -1,0 +1,18 @@
+<!--Macro for field of signup form -->
+
+{% macro display_field(field_name,placeholder_value) %}
+<div>
+    <label class="form-label">{{placeholder_value}}:</label>
+    {{
+        field_name(class="form-control",placeholder=placeholder_value,**kwargs)
+    }}
+
+    <!--Error Messages-->
+    <!--Validators will generate a  list for errors which we can display using jinja for loop-->
+    <ul>
+        {% for error in field_name.errors %}
+            <li>{{error}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endmacro %}

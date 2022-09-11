@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Permanent+Marker&family=Ubuntu:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.flx {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  min-height: 66px;
+  overflow: hidden;
+}
+
+.window {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.bg_base {
+  width: 100%;
+  height: 100%;
+  min-height: 77vh;
+  position: relative;
+  background-color: black;
+}
+
+.bg_land {
+  color: #fff;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Koulen', cursive;
+  text-align: center;
+}
+
+.bg_login {
+  background-color: black;
+  color: #fff;
+  font-size: 3vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+
+.bg_signup {
+  background-color: black;
+  color: #fff;
+  font-size: 3vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Ubuntu';
+  text-align: center;
+}
+
+.gfont {
+  font-family: 'Ubuntu';
+  line-height: 0;
+  color: white;
+}
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff !important;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  font-size: 250% !important;
+  color: transparent !important;
+  -webkit-text-stroke: 1px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  font-size: 250% !important;
+  color: #03a9f4 !important;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.content p {
+  color: #fff !important;
+  width: 100vw;
+  font-size: 9vw;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content p:nth-child(1) {
+  color: transparent !important;
+  -webkit-text-stroke: 1px #03a9f4;
+}
+
+.content p:nth-child(2) {
+  color: #03a9f4 !important;
+  animation: animate 4s ease-in-out infinite;
+}
+
+.footdiv {
+  display: flex;
+  background: white;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  z-index: 5;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+#social-icon__link {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+#social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+#menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+#menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animatenew 3s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animatenew 2s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animatenew {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #03a9f4;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #000000;
+}
+
+.loginLogo {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.borderStyle {
+  border-radius: 10px;
+  background: linear-gradient(-45deg, rgb(60, 60, 60) 1%, #03a8f488);
+}
+
+.navStyle {
+  background: linear-gradient(-45deg, #03a8f488 1%,rgb(60, 60, 60));
+}
+
+.imb {
+  margin-bottom: 200px !important;
+}
+
+.represent {
+  min-width: 70vw;
+}

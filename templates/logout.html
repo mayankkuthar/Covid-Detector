@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Unauthenticated - Covid Detectorr</title>
+{% endblock title %}
+
+{% block nav_left %}
+<form class="d-flex">
+    <button formaction="/login" class="btn btn-primary mx-2" type="submit">Login</button>
+</form>
+{% endblock nav_left %}
+
+{% block body %}
+<div class="bg_base bg_login ">
+
+    <div class="borderStyle imb mt-5 ps-5 pe-5 pb-5 pt-5">
+        <div class="content loginLogo">
+            <h2 class="mt-0">CD</h2>
+            <h2 class="mt-0">CD</h2>
+        </div>
+        <div class="mb-3">
+            <h2>Successfully Logout !!!</h2>
+        </div>
+        <div class="mb-3">
+            <img src="/static/logo.png" alt="Logo" style="width:50%;" class="rounded-pill"> 
+        </div>
+    </div>
+</div>
+{% endblock body %}

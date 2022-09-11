@@ -1,0 +1,41 @@
+{% from 'form_helper.html' import display_field %}
+
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Privacy Policy - Covid Detector</title>
+{% endblock title %}
+
+{% block nav_left %}
+<form class="d-flex">
+    <button formaction="/signup" class="btn btn-danger mx-2" type="submit">Sign Up</button>
+</form>
+{% endblock nav_left %}
+
+{% block body %}
+<div class="bg_login">
+    <div class="borderStyle imb mt-5 ps-5 pe-5 pb-5 pt-5" style="max-width: 60vw;">
+        <div class="content loginLogo" >
+            <h2 class="mt-0">CD</h2>
+            <h2 class="mt-0">CD</h2>
+        </div>
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <h4 stryle="font-weight: 900 !important;">Privacy Policy</h4>
+            </div>
+            <div class="mb-3">
+                <p class="mt-3 mx-5" style="text-align: left !important;">
+                    1. INTRODUCTION: Welcome to Covid Detector Data Monitor (the “App“). This App is published by or on behalf of Covid Detector (“Covid Detector” or “We” or “Us“) a company registered in United States of America whose registered office at 222 Thomas Avenue, Baltimore, MD 21225By downloading or otherwise accessing the App you agree to be bound by the following terms and conditions (“Terms“) and our privacy policy and our cookies policy. If you have any queries about the App or these Terms, you can contact us. If you do not agree with these Terms, you should stop using the App immediately.
+                    <br><br>2. The trademarks, service marks, and logos (“Trade Marks“) contained on or in the App are owned by Covid Detector or its group companies or third party partners of Covid Detector. You cannot use, copy, edit, vary, reproduce, publish, display, distribute, store, transmit, commercially exploit or disseminate the Trade Marks without the prior written consent of Covid Detector or the relevant group company or the relevant third party partner of Covid Detector.
+                    <br><br>3. LINK TO THIRD PARTIES: The App may contain links to websites operated by third parties (“Third Party Websites“). Covid Detector may monetise some of these links through the use of third party affiliate programmes. Notwithstanding such affiliate programmes, Covid Detector does not have any influence or control over any such Third Party Websites and, unless otherwise stated, is not responsible for and does not endorse any Third Party Websites or their availability or contents.
+                    <br><br>4. SERVICE SUSPENSION: Covid Detector reserves the right to suspend or cease providing any services relating to the apps published by it, with or without notice, and shall have no liability or responsibility to you in any manner whatsoever if it chooses to do so.
+                    <br><br>5. ADVERTISERS IN THE APP: We accept no responsibility for adverts contained within the App. If you agree to purchase goods and/or services from any third party who advertises in the App, you do so at your own risk. The advertiser, not Covid Detector, is responsible for such goods and/or services and if you have any queries or complaints in relation to them, your only recourse is against the advertiser.
+                    <br><br>6. COMPETITIONS: If you take part in any competition which is run in or through the App (“Competition“), you agree to be bound by the rules of that competition and any other rules specified by Covid Detector from time to time (“Competition Rules“) and by the decisions of Covid Detector, which are final in all matters relating to the Competition. Covid Detector reserves the right to disqualify any entrant and/or winner in its absolute discretion without notice in accordance with the Competition Rules.
+                    <br><br>7. IN-APP VOUCHER CODES: Any in-app voucher codes issued by Covid Detector may only be used in accordance with our Terms and Conditions for in-app voucher codes.
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock body %}

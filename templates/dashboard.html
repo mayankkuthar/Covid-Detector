@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Dashboard - Covid Detector</title>
+{% endblock title %}
+
+{% block nav_left %}
+<form class="d-flex gfont">
+   <h6 class="pt-2"> Welcome, {{user.fullname}}</h6>
+   <button formaction="/logout" class="btn btn-danger mx-2" type="submit">Logout</button> 
+</form>
+{% endblock nav_left %}
+
+{% block body %}
+<div class="bg_login">
+    <div class="borderStyle represent imb mt-5 ps-5 pe-5 pb-5 pt-5">
+        <div class="content loginLogo" >
+            <h2 class="mt-0">CD</h2>
+            <h2 class="mt-0">CD</h2>
+        </div>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload your Chest-XRAY</label>
+                <input class="form-control" type="file" name="chest_xray" id="formFile" accept="image/*">
+            </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            {% if status != ''  %}
+            <div class="mb-3">
+                <h4>{{status}}</h4>
+            </div>
+            <div class="mb-3">
+                <img src="{{url_for('static', filename= image)}}" alt="Chest-Xray" class="mx-5" style="width:60vh; border-radius: 5%;"> 
+            </div>
+            <div class="mb-3">
+                <h2>Covid Report: {{ans}}</h2>
+            </div>
+            <div class="mb-3">
+                <h4>GradCAM of your Chest-XRAY</h4>
+            </div>
+            <div class="mb-3">
+                <img src="static/cam.jpg" alt="Chest-Xray" class="mx-5" style="width:60vh; border-radius: 5%;"> 
+            </div>
+            <div class="mb-3">
+                <h4>Heat Map & Confusion Matrix</h4>
+            </div>
+            <div class="mb-3">
+                <img src="static/heatmap.jpg" alt="Chest-Xray" class="mx-3" style="width:60vh; border-radius: 5%;"> 
+                <img src="static/confmat.jpg" alt="Chest-Xray" class="mx-3" style="width:60vh; border-radius: 5%;">
+            </div>
+            <div class="mb-3">   
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</div>
+{% endblock body %}
